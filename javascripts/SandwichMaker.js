@@ -1,3 +1,7 @@
+"use strict";
+
+
+
 var SandwichMaker = (function() {
 
   // Private variable to store the price
@@ -7,6 +11,13 @@ var SandwichMaker = (function() {
   return {
     addTopping: function(toppingPrice) {
       totalPrice += toppingPrice;
+    },
+    removeTopping: function(toppingPrice) {
+      totalPrice -= toppingPrice;
+    },
+    showTotal: function() {
+    	return totalPrice.toFixed(2);
     }
+
   };
 })();

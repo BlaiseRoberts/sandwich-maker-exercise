@@ -2,49 +2,77 @@
 <html>
 <head>
 	<title>Sandwhich Maker</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Sandwhichville!</h1>
-	<form>
-		<legend>What kind of sandwhich would you like?</legend>
-		<section>
-			<label>"Bread Bread Bread" -Oprah</label>
-			<br>
-			<select>
-				<option name="white" value="white">White</option>
-				<option name="wheat" value="wheat">Wheat</option>
-				<option name="rye" value="rye">Rye</option>
-				<option name="sourdough" value="sourdough">Sourdough</option>
-			</select>
-		</section>
-		<section>
-			<label>I <3 MEAT!</label>
-			<br>
-			<input type="checkbox" name="turkey">Turkey
-			<input type="checkbox" name="ham">Ham
-			<input type="checkbox" name="chicken">Chicken
-			<input type="checkbox" name="roast-beef">Roast Beef
-		</section>
-		<section>
-			<label>Cheeseeeeeee(snap pic)</label>
-			<br>
-			<input type="checkbox" name="american">American
-			<input type="checkbox" name="swiss">Swiss
-			<input type="checkbox" name="cheddar">Cheddar
-		</section>
-		<section>
-			<label>Condiments</label>
-			<br>
-			<input type="checkbox" name="mayo">Mayo
-			<input type="checkbox" name="mustard">Mustard
-		</section>
-		<section>
-			<label>Veggies</label>
-			<br>
-			<input type="checkbox" name="lettus">Lettuce
-			<input type="checkbox" name="tomato">Tomato
-			<input type="checkbox" name="onion">Onion
-		</section>
-	</form>
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center">Welcome to Sandwhichville!</h1>
+		</div>
+		<div class="row">
+			<form class="col-sm-6 col-sm-offset-3 form-horizontal">
+				<legend class="well">What kind of sandwhich would you like?</legend>
+				<section class="form-group">
+					<label>"Bread Bread Bread" -Oprah</label>
+					<br>
+					<select id="bread-chooser" class="form-control">
+						<option value="" selected disabled>Please Choose a Bread</option>
+						<option name="white" value="white">White</option>
+						<option name="wheat" value="wheat">Wheat</option>
+						<option name="rye" value="rye">Rye</option>
+						<option name="sourdough" value="sourdough">Sourdough</option>
+					</select>
+				</section>
+				<section class="form-group">
+					<label>I <3 MEAT!</label>
+					<br>
+					<select id="meat-chooser" class="form-control">
+						<option value="" selected disabled>Make a Choice!</option>
+						<option name="turkey" value="turkey">Turkey</option>
+						<option name="ham" value="ham">Ham</option>
+						<option name="chicken" value="chicken">Chicken</option>
+						<option name="no-meat" value="no-meat">No Meat</option>
+					</select>
+				</section>
+				<section class="form-group">
+					<label>Cheeseeeeeee(snap pic)</label>
+					<br>
+					<input type="checkbox" value="american">American
+					<input type="checkbox" value="swiss">Swiss
+					<input type="checkbox" value="cheddar">Cheddar
+				</section>
+				<section class="form-group">
+					<label>Condom-Mints</label>
+					<br>
+					<input type="checkbox" value="mayo">Mayo
+					<input type="checkbox" value="mustard">Mustard
+				</section>
+				<section class="form-group">
+					<label>Veggies</label>
+					<br>
+					<input type="checkbox" value="lettuce">Lettuce
+					<input type="checkbox" value="tomato">Tomato
+					<input type="checkbox" value="onion">Onion
+				</section>
+			</form>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-sm-offset-3">
+				<button class="btn btn-success" type="button">Make your Sandwich!</button>
+			</div>
+			<div class="col-sm-5" id="total-price">
+					<h3>Your total price will be: </h3>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/javascripts/SandwichMaker.js"></script>
+	<script type="text/javascript" src="/javascripts/Bread.js"></script>	
+	<script type="text/javascript" src="/javascripts/Meat.js"></script>
+	<script type="text/javascript" src="javascripts/Cheese.js"></script>
+	<script type="text/javascript" src="javascripts/Condiments.js"></script>
+	<script type="text/javascript" src="javascripts/Veggies.js"></script>
+	<script type="text/javascript" src="/javascripts/DOMHandler.js"></script>
 </body>
 </html>

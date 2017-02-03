@@ -4,16 +4,16 @@
 var SandwichMaker = ((maker) => {
 
   // Private variable to store the different meat prices
-  var meatPrices = {
-  	turkey: 3.00,
-  	ham: 2.00,
-  	chicken: 4.00,
-  	"no-meat": 0
+  var breadPrices = {
+  	white: 3,
+  	wheat: 2,
+  	rye: 4,
+  	sourdough: 3
   };
 
   //Augment the original object with another method
-  maker.addMeat = (meat) => {
-    return meatPrices[meat];
+  maker.addBread = (bread) => {
+    return breadPrices[bread];
   };
 
   // Return the new, augmented object with the new method on it
