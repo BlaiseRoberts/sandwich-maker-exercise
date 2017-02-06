@@ -4,7 +4,7 @@
 
 var meatPrice = 0;
 var breadPrice = 0;
-
+let TEMP;
 
 //Selectors
 $("#meat-chooser").change( () => {
@@ -23,41 +23,41 @@ $("#bread-chooser").change( () => {
 //Cheese Checkboxes
 $("input[value='american']").click( () => {
 	var cheesePrice = SandwichMaker.addCheese($("input[value='american']").val());
-	$("input[value='american']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
+	 TEMP = $("input[value='american']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
 });
 $("input[value='swiss']").click( () => {
 	var cheesePrice = SandwichMaker.addCheese($("input[value='swiss']").val());
-	$("input[value='swiss']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
+	TEMP = $("input[value='swiss']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
 });
 $("input[value='cheddar']").click( () => {
 	var cheesePrice = SandwichMaker.addCheese($("input[value='cheddar']").val());
-	$("input[value='cheddar']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
+	TEMP = $("input[value='cheddar']").is(":checked") ? SandwichMaker.addTopping(cheesePrice) : SandwichMaker.removeTopping(cheesePrice);
 });
 
 
 //Condiments Checkboxes
 $("input[value='mayo']").click( () => {
 	var condPrice = SandwichMaker.addCond($("input[value='mayo']").val());
-	$("input[value='mayo']").is(":checked") ? SandwichMaker.addTopping(condPrice) : SandwichMaker.removeTopping(condPrice);
+	TEMP = $("input[value='mayo']").is(":checked") ? SandwichMaker.addTopping(condPrice) : SandwichMaker.removeTopping(condPrice);
 });
 $("input[value='mustard']").click( () => {
 	var condPrice = SandwichMaker.addCond($("input[value='mustard']").val());
-	$("input[value='mustard']").is(":checked") ? SandwichMaker.addTopping(condPrice) : SandwichMaker.removeTopping(condPrice);
+	TEMP = $("input[value='mustard']").is(":checked") ? SandwichMaker.addTopping(condPrice) : SandwichMaker.removeTopping(condPrice);
 });
 
 
 //Veggies Checkboxes
 $("input[value='lettuce']").click( () => {
 	var veggiePrice = SandwichMaker.addVeggies($("input[value='lettuce']").val());
-	$("input[value='lettuce']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) : SandwichMaker.removeTopping(veggiePrice);
+	TEMP = $("input[value='lettuce']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) : SandwichMaker.removeTopping(veggiePrice);
 });
 $("input[value='tomato']").click( () => {
 	var veggiePrice = SandwichMaker.addVeggies($("input[value='tomato']").val());
-	$("input[value='tomato']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) :	SandwichMaker.removeTopping(veggiePrice);
+	TEMP = $("input[value='tomato']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) :	SandwichMaker.removeTopping(veggiePrice);
 });
 $("input[value='onion']").click( () => {
 	var veggiePrice = SandwichMaker.addVeggies($("input[value='onion']").val());
-	$("input[value='onion']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) : SandwichMaker.removeTopping(veggiePrice);
+	TEMP = $("input[value='onion']").is(":checked") ? SandwichMaker.addTopping(veggiePrice) : SandwichMaker.removeTopping(veggiePrice);
 });
 
 
